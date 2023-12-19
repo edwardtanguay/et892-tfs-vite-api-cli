@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { IAppData } from "./interfaces";
 
 const backendUrl = "http://localhost:4009/appData";
 
 function App() {
-	const [appData, setAppData] = useState({});
+	const [appData, setAppData] = useState<IAppData>({} as IAppData);
 
 	useEffect(() => {
 		(async () => {
@@ -18,6 +19,7 @@ function App() {
 		<>
 			<h1>Info Site</h1>
 			<ul>
+				<li>app idCode: {appData.appIdCode}</li>
 				<li>frontend port: {appData.frontendPort}</li>
 				<li>backend port: {appData.backendPort}</li>
 			</ul>
