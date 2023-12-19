@@ -1,6 +1,7 @@
 import express from 'express';
 import * as config from '../config.js';
 import cors from 'cors';
+import { IAppData } from '../../src/interfaces.js';
 
 const app = express();
 app.use(cors());
@@ -10,11 +11,12 @@ app.get('/', (_req, res) => {
 });
 
 app.get('/appdata', (_req, res) => {
-	res.status(200).json({
+	const appData: IAppData = {
 		appIdCode: config.appIdCode(),
 		frontendPort: config.frontendPort(),
 		backendPort: config.backendPort()
-	});
+	}
+	res.status(200).json(appData);
 });
 
 app.listen(config.backendPort(), () => {
