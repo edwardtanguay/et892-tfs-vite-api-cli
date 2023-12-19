@@ -14,7 +14,6 @@ function App() {
 		(async () => {
 			const response = await axios.get(backendUrl);
 			const _appData = response.data;
-			console.log(_appData);
 			setAppData(_appData);
 		})();
 	}, []);
