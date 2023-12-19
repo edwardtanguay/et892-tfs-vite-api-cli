@@ -18,11 +18,11 @@ function App() {
 	return (
 		<>
 			<h1>Info Site</h1>
-			<ul>
-				<li>app idCode: {appData.appIdCode}</li>
-				<li>frontend port: {appData.frontendPort}</li>
-				<li>backend port: {appData.backendPort}</li>
-			</ul>
+			<table>
+				<tr><td>app idCode:</td> <td className="data">{appData.appIdCode}</td></tr>
+				<tr><td>frontend port</td> <td className="data">{appData.frontendPort}</td></tr>
+				<tr><td>backend port</td> <td className="data">{appData.backendPort}</td></tr>
+			</table>
 		</>
 	);
 }

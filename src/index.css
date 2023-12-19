@@ -2,3 +2,15 @@ body {
 	font-family: sans-serif;
 	padding: 0 1rem;
 }
+
+table td {
+	background-color: #ddd;
+	padding: .5rem;
+}
+
+table td.data {
+	font-family: 'Courier New', Courier, monospace;
+	color: brown;
+}
+
+
