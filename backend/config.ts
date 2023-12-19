@@ -1,4 +1,5 @@
 import * as btools from './backendTools.js';
+import * as tools from '../src/tools.js';
 
 export const appIdCode = () => {
 	const packageJsonObj = btools.readJsonFile('./package.json');
@@ -9,7 +10,7 @@ export const appIdCode = () => {
 export const frontendPort = () => {
 	const packageJsonObj = btools.readJsonFile('./package.json');
 	const devCommand = packageJsonObj.scripts.frontend;
-	const port = btools.extractPortNumber(devCommand);	
+	const port = tools.extractPortNumber(devCommand);	
 	return port;
 }
 

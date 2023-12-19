@@ -8,9 +8,10 @@ table td {
 	padding: .5rem;
 }
 
-table td.data {
+table td.data, code {
 	font-family: 'Courier New', Courier, monospace;
 	color: brown;
 }
+
 
 
