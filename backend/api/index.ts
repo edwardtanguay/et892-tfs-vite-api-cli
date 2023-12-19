@@ -9,11 +9,16 @@ app.get('/', (_req, res) => {
 
 app.get('/appdata', (_req, res) => {
 	res.status(200).json({
+		appIdCode: config.appIdCode(),
 		frontendPort: config.frontendPort(),
 		backendPort: config.backendPort()
 	});
 });
 
 app.listen(config.backendPort(), () => {
-	console.log(`listening at http://localhost:${config.backendPort()}`);
+	console.log(`---
+APP: ${config.appIdCode()}
+FRONTEND URL: http://localhost:${config.frontendPort()}
+BACKEND URL: http://localhost:${config.backendPort()}
+`);
 });
