@@ -1,7 +1,9 @@
 import express from 'express';
 import * as config from '../config.js';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 app.get('/', (_req, res) => {
 	res.status(200).json({ 'message': 'api works' });
